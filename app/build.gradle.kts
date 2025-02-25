@@ -49,16 +49,17 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    // Thêm Material Icons nếu cần
-    implementation("androidx.compose.material:material-icons-extended:1.5.4")
-    implementation("androidx.compose.material3:material3:1.1.2")
-    implementation("androidx.navigation:navigation-compose:2.7.2")
-    implementation("androidx.compose.ui:ui:1.5.0")
-    implementation("androidx.compose.material:material:1.5.0")
-    implementation("androidx.navigation:navigation-compose:2.5.3")
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.compose.ui:ui-text-google-fonts:1.5.2")
+
+    dependencies {
+        implementation ("androidx.compose.ui:ui-tooling-preview:1.3.1") //cung cấp công cụ preview
+        implementation ("androidx.compose.material:material:1.3.1") // button, card,topappbar, bottomnavigation
+        implementation ("androidx.compose.foundation:foundation:1.3.1") // cơ bản lazy, lazzyrow, imgae, clickable, ..
+        implementation ("androidx.compose.runtime:runtime:1.3.1") // quản lí trng thái (lưu dlieu fform, cập nhât ui khi có thay đổi) remember, mutableStateOf
+        implementation ("androidx.navigation:navigation-compose:2.5.3") //điều hướng
+        implementation ("androidx.compose.ui:ui-graphics:1.3.1")// hình ảnh, màuăsắc, animation
+        implementation ("androidx.navigation:navigation-testing:2.7.5")
+    }
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
